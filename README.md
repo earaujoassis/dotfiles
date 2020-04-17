@@ -1,6 +1,13 @@
 # dotfiles
 
-> dotfiles <3
+> dotfiles <3 for ZSH
+
+## Install & Setup
+
+```sh
+git clone https://github.com/earaujoassis/dotfiles.git ~/dotfiles
+~/dotfiles/bootstrap.zsh
+```
 
 ## License
 
