@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+
+set -o nounset
+set -o errexit
+
+giffy() {
+  if [[ $# < 1 || $# > 2 ]]; then
+    echo -e "Usage:\n$ ${FUNCNAME[0]} <input> [output]"
+    exit 1
+  fi
+
+  input=$1
+  output=${2:-${1%.*}.gif}
+
+  echo "Creating pallete"
+  _createPallete "$input"
+
+  echo "Creating gif..."
+  _convertToGif "$input" "$output"
+
+  echo "Cleaning up..."
+  _cleanUp
+}
+
+_createPallete() {
+  createPallete="ffmpeg -i $1 -vf palettegen tmp_pallete.png"
+  eval "$createPallete" > /dev/null
+}
+
+_convertToGif() {
+  convertToGif="ffmpeg -i $1 -i tmp_pallete.png -r 10 $2"
+  eval "$convertToGif" > /dev/null
+}
+
+_cleanUp() {
+  eval "rm tmp_pallete.png"
+}
+
+giffy "$@"
