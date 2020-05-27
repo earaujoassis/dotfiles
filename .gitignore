@@ -5,3 +5,6 @@
 
 # Code Editors
 .vscode
+
+# ASDF
+.tool-versions
