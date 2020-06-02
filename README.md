@@ -8,6 +8,7 @@
 $ git clone https://github.com/earaujoassis/dotfiles.git ~/dotfiles
 $ ~/dotfiles/bootstrap.zsh
 $ ~/dotfiles/macos-setup.sh
+$ ~/dotfiles/git-setup.sh
 ```
 
 ## License
