@@ -2,3 +2,4 @@
 
 alias git-push="git push -u origin HEAD"
 alias git-pull="git fetch && git pull origin"
+alias git-master="git checkout master"
