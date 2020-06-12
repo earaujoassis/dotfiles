@@ -15,13 +15,21 @@ if ! grep -q 'source $HOME/dotfiles/zsh/aliases.zsh' "$HOME_PROFILE"; then
     echo 'export PATH=$HOME/.local/bin:$HOME/dotfiles/script:$PATH' >> $HOME_PROFILE
 fi
 
-if ! grep -q 'source $HOME/.profile' "$HOME/.zshrc"; then
+if ! [ `which brew` ]
+then
+    echo "Installing Homebrew"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+fi
+
+if ! grep -q 'source $HOME/.profile' "$HOME/.zshrc"
+then
     echo "" >> $HOME/.zshrc
     echo 'source $HOME/.profile' >> $HOME/.zshrc
 fi
 
 export ASDF_DIR=$HOME/.asdf
-if ! [ -d "$ASDF_DIR" ]; then
+if ! [ -d "$ASDF_DIR" ]
+then
     git clone https://github.com/asdf-vm/asdf.git $ASDF_DIR --branch v0.7.8
     echo "" >> $HOME_PROFILE
     echo 'source $HOME/.asdf/asdf.sh' >> $HOME_PROFILE
@@ -32,7 +40,8 @@ else
 fi
 
 export SDKMAN_DIR=$HOME/.sdkman
-if ! [ -d "$SDKMAN_DIR" ]; then
+if ! [ -d "$SDKMAN_DIR" ]
+then
     curl -s "https://get.sdkman.io" | bash
     echo "" >> $HOME_PROFILE
     echo 'source $HOME/.sdkman/bin/sdkman-init.sh' >> $HOME_PROFILE
@@ -42,7 +51,8 @@ else
 fi
 
 GNUBIN="/usr/local/opt/coreutils/libexec/gnubin"
-if [ -f "$GNUBIN" ]; then
+if [ -f "$GNUBIN" ]
+then
     echo "" >> $HOME_PROFILE
     echo 'export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"' >> $HOME_PROFILE
 fi
