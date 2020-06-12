@@ -1,6 +1,7 @@
 # Aliases for ZSH
 
 ZSHDIR=$(dirname $(realpath "$0"))
+source $ZSHDIR/exports.zsh
 source $ZSHDIR/git.zsh
 
 SUBLIME_MACOS="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
