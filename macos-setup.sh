@@ -88,4 +88,8 @@ echo 'Restarting apps...'
 killall Finder
 killall Dock
 
+echo 'Setup Xcode'
+xcode-select --install
+sudo sudo xcodebuild -license
+
 echo 'Done!'
