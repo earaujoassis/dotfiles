@@ -18,7 +18,7 @@ fi
 if ! [ `which brew` ]
 then
     echo "Installing Homebrew"
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 
 if ! grep -q 'source $HOME/.profile' "$HOME/.zshrc"
@@ -58,5 +58,12 @@ then
 fi
 
 git config --global core.excludesfile $BASEDIR/.gitignore
+
+if [ "$(uname)" == "Darwin" ]
+then
+    bash -c $BASEDIR/macos-setup.sh
+fi
+
+bash -c $BASEDIR/git-setup.sh
 
 echo '> You must source $HOME/.profile'

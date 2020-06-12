@@ -2,13 +2,13 @@
 
 > dotfiles <3 for ZSH
 
+This setup was tested on Linux (openSUSE installation) and macOS 10.15.x.
+
 ## Install & Setup
 
 ```sh
 $ git clone https://github.com/earaujoassis/dotfiles.git ~/dotfiles
 $ ~/dotfiles/bootstrap.zsh
-$ ~/dotfiles/macos-setup.sh
-$ ~/dotfiles/git-setup.sh
 ```
 
 ## License
