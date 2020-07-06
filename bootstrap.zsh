@@ -57,6 +57,14 @@ then
     echo 'export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"' >> $HOME_PROFILE
 fi
 
+if ! [ `which starship` ]
+then
+    echo "Installing Starship"
+    curl -fsSL https://starship.rs/install.sh | bash
+    echo "" >> $HOME_PROFILE
+    echo 'eval "$(starship init zsh)"' >> $HOME_PROFILE
+fi
+
 git config --global core.excludesfile $BASEDIR/.gitignore
 
 if [ "$(uname)" == "Darwin" ]
