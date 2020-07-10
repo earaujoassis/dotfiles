@@ -11,9 +11,9 @@ if ! [ -d "$OMF_DIR" ]
     curl -L https://get.oh-my.fish | fish
 end
 
-if ! grep -q 'source $HOME/dotfiles/zsh/aliases.zsh' "$CONFIG_FILE"
+if ! grep -q 'source $HOME/dotfiles/fish/aliases.fish' "$CONFIG_FILE"
     echo "" >> $CONFIG_FILE
-    echo 'source $HOME/dotfiles/zsh/aliases.zsh' >> $CONFIG_FILE
+    echo 'source $HOME/dotfiles/zsh/aliases.fish' >> $CONFIG_FILE
     mkdir -p $HOME/.local/bin
     echo "" >> $CONFIG_FILE
     echo 'export PATH=$HOME/.local/bin:$HOME/dotfiles/script:$PATH' >> $CONFIG_FILE
@@ -22,11 +22,6 @@ end
 if ! [ `which brew` ]
     echo "Installing Homebrew"
     bash -c "(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-end
-
-if ! grep -q 'source $HOME/.profile' "$HOME/.zshrc"
-    echo "" >> $HOME/.zshrc
-    echo 'source $HOME/.profile' >> $HOME/.zshrc
 end
 
 set ASDF_DIR ($HOME/.asdf)
