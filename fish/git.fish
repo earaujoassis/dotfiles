@@ -6,7 +6,7 @@ alias git-master="git checkout master"
 
 function git-tag
     if [ "$argv[1]" ]
-        command git tag $1 && git push origin $1
+        command git tag $argv[1] && git push origin $argv[1]
     else
         command echo "Error: missing tag name"
     end
