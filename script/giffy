@@ -23,12 +23,12 @@ giffy() {
 }
 
 _createPallete() {
-  createPallete="ffmpeg -i $1 -vf palettegen tmp_pallete.png"
+  createPallete="ffmpeg -i '$1' -vf palettegen tmp_pallete.png"
   eval "$createPallete" > /dev/null
 }
 
 _convertToGif() {
-  convertToGif="ffmpeg -i $1 -i tmp_pallete.png -r 10 $2"
+  convertToGif="ffmpeg -i '$1' -i tmp_pallete.png -r 10 '$2'"
   eval "$convertToGif" > /dev/null
 }
 
