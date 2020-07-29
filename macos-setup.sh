@@ -17,7 +17,7 @@ defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 defaults write com.apple.menuextra.battery ShowTime -string "NO"
 
 # Scrollbars: display when scrolling:
-defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
+defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 
 # Always use expanded save dialog:
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
