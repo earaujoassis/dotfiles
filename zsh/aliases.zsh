@@ -1,7 +1,6 @@
 # Aliases for ZSH
 
 ZSHDIR=$(dirname $(realpath "$0"))
-source $ZSHDIR/exports.zsh
 source $ZSHDIR/git.zsh
 source $ZSHDIR/docker.zsh
 

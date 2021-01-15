@@ -7,9 +7,9 @@ touch $HOME_PROFILE
 source $HOME_PROFILE
 BASEDIR=$(dirname $(realpath "$0"))
 
-if ! grep -q 'source $HOME/dotfiles/zsh/aliases.zsh' "$HOME_PROFILE"; then
+if ! grep -q 'source $HOME/dotfiles/zsh/profile.zsh' "$HOME_PROFILE"; then
     echo "" >> $HOME_PROFILE
-    echo 'source $HOME/dotfiles/zsh/aliases.zsh' >> $HOME_PROFILE
+    echo 'source $HOME/dotfiles/zsh/profile.zsh' >> $HOME_PROFILE
     mkdir -p $HOME/.local/bin
     echo "" >> $HOME_PROFILE
     echo 'export PATH=$HOME/.local/bin:$HOME/dotfiles/script:$PATH' >> $HOME_PROFILE

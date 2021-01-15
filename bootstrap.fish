@@ -11,9 +11,9 @@ if ! [ -d "$OMF_DIR" ]
     curl -L https://get.oh-my.fish | fish
 end
 
-if ! grep -q 'source $HOME/dotfiles/fish/aliases.fish' "$CONFIG_FILE"
+if ! grep -q 'source $HOME/dotfiles/fish/profile.fish' "$CONFIG_FILE"
     echo "" >> $CONFIG_FILE
-    echo 'source $HOME/dotfiles/zsh/aliases.fish' >> $CONFIG_FILE
+    echo 'source $HOME/dotfiles/zsh/profile.fish' >> $CONFIG_FILE
     mkdir -p $HOME/.local/bin
     echo "" >> $CONFIG_FILE
     echo 'export PATH=$HOME/.local/bin:$HOME/dotfiles/script:$PATH' >> $CONFIG_FILE
