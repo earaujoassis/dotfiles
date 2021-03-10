@@ -16,3 +16,7 @@ ps-sbt() {
 kill-sbt() {
     kill -9 $(ps aux | grep sbt | awk '{ print $2 }' | sed -n 1p)
 }
+
+whereami() {
+    echo $PWD
+}
