@@ -5,6 +5,7 @@ alias git-pull="git fetch && git pull origin"
 alias git-master="git checkout master"
 alias git-main="git checkout main"
 alias git-amend="git commit --amend --no-edit --all"
+alias git-hash="git describe --always"
 
 git-tag() {
     if [ "$1" ]
