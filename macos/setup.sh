@@ -9,7 +9,7 @@ set -e
 # - https://github.com/sobolevn/dotfiles
 #
 
-echo 'Setup macOS settings'
+echo '> Setup macOS settings'
 osascript -e 'tell application "System Preferences" to quit'
 
 # Battery: hide time; display percentage
@@ -84,12 +84,12 @@ defaults write org.p0deje.Maccy pasteByDefault true
 defaults write org.p0deje.Maccy historySize 20
 
 # Restarting apps:
-echo 'Restarting apps...'
+echo '> Restarting apps...'
 killall Finder
 killall Dock
 
-echo 'Setup Xcode'
+echo '> Setup Xcode'
 xcode-select --install
 sudo sudo xcodebuild -license
 
-echo 'Done!'
+echo '> Done!'
