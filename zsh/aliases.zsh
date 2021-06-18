@@ -20,3 +20,7 @@ kill-sbt() {
 whereami() {
     echo $PWD
 }
+
+brew-dump() {
+    brew bundle dump --file=$HOME/dotfiles/brew/Brewfile --force
+}
