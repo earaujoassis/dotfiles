@@ -22,6 +22,7 @@ end
 if "(uname)" == "Darwin"
     bash -c $BASEDIR/macos/setup.sh
     bash -c $BASEDIR/brew/setup.sh
+    bash -c $BASEDIR/macos/post-brew.sh
     bash -c $BASEDIR/coreutils/setup.sh
     bash -c $BASEDIR/alacritty/setup.sh
 else

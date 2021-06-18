@@ -78,11 +78,6 @@ defaults write com.apple.Safari \
   com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaEnabledForLocalFiles \
   -bool false
 
-# === Maccy ===
-# https://github.com/p0deje/Maccy
-defaults write org.p0deje.Maccy pasteByDefault true
-defaults write org.p0deje.Maccy historySize 20
-
 # Restarting apps:
 echo '> Restarting apps...'
 killall Finder
