@@ -3,6 +3,7 @@
 ZSHDIR=$(dirname $(realpath "$0"))
 source $ZSHDIR/git.zsh
 source $ZSHDIR/docker.zsh
+source $ZSHDIR/ssh.zsh
 
 SUBLIME_MACOS="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 if [ -f "$SUBLIME_MACOS" ]; then
