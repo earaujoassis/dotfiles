@@ -10,7 +10,7 @@ if ! [ `which brew` ]
 then
     echo '> Installing Homebrew'
     bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-    brew bundle --file=$BASEDIR/Brewfile
+    /opt/homebrew/bin/brew bundle --file=$BASEDIR/Brewfile
 fi
 
 echo '> Done!'

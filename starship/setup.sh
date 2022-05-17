@@ -10,7 +10,7 @@ echo '> Setup Starship'
 if ! [ `which starship` ]
 then
     echo '> Installing Starship'
-    curl -fsSL https://starship.rs/install.sh | bash
+    curl -fsSL https://starship.rs/install.sh | sh
     echo "" >> $HOME_PROFILE
     echo 'eval "$(starship init zsh)"' >> $HOME_PROFILE
 fi
