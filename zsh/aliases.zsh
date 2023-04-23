@@ -5,6 +5,10 @@ source $ZSHDIR/git.zsh
 source $ZSHDIR/docker.zsh
 source $ZSHDIR/ssh.zsh
 
+if [ -f "$ZSHDIR/work-setup.zsh" ]; then
+    source $ZSHDIR/work-setup.zsh
+fi
+
 SUBLIME_MACOS="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 if [ -f "$SUBLIME_MACOS" ]; then
     alias sublime = "$SUBLIME_MACOS"
