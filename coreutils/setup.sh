@@ -2,15 +2,13 @@
 
 set -e
 
-echo '> Setup coreutils'
-
 HOME_PROFILE=$HOME/.profile
 GNUBIN="/usr/local/opt/coreutils/libexec/gnubin"
 
-if [ -f "$GNUBIN" ]
+if [ -f "$GNUBIN" ] && ! [ `grep -q 'export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"' "$HOME_PROFILE"` ]
 then
+    echo '> Setup coreutils'
     echo "" >> $HOME_PROFILE
     echo 'export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"' >> $HOME_PROFILE
+    echo '> Done!'
 fi
-
-echo '> Done!'

@@ -1,20 +1,17 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
 export HOME_PROFILE=$HOME/.profile
 touch $HOME_PROFILE
-source $HOME_PROFILE
-BASEDIR=$(dirname $(realpath "$0"))
-
-echo '> Setup Starship'
+BASEDIR=$DOTFILES_HOME/starship
 
 if ! [ `which starship` ]
 then
+    echo '> Setup Starship'
     echo '> Installing Starship'
     curl -fsSL https://starship.rs/install.sh | sh
     echo "" >> $HOME_PROFILE
     echo 'eval "$(starship init zsh)"' >> $HOME_PROFILE
     mkdir -p $HOME/.config
     ln -s $BASEDIR/starship.toml $HOME/.config/starship.toml
+    echo '> Done!'
 fi
-
-echo '> Done!'

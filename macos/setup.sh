@@ -1,13 +1,25 @@
 #!/usr/bin/env bash
 
-set -e
-
 # Setup macOS settings. This is inspired by the following repos:
 #
 # - https://github.com/rootbeersoup/dotfiles
 # - https://github.com/skwp/dotfiles
 # - https://github.com/sobolevn/dotfiles
 #
+
+echo '> Setup Xcode'
+
+xcode-select --install
+if [ $? != 0 ]
+then
+    echo '> Error: xcode-select --install'
+fi
+
+sudo sudo xcodebuild -license
+if [ $? != 0 ]
+then
+    echo '> Error: sudo sudo xcodebuild -license'
+fi
 
 echo '> Setup macOS settings'
 osascript -e 'tell application "System Preferences" to quit'
@@ -82,9 +94,5 @@ defaults write com.apple.Safari \
 echo '> Restarting apps...'
 killall Finder
 killall Dock
-
-echo '> Setup Xcode'
-xcode-select --install
-sudo sudo xcodebuild -license
 
 echo '> Done!'

@@ -4,7 +4,7 @@ set -e
 
 echo '> Setup Linux'
 
-BASEDIR=$(dirname $(realpath "$0"))
+BASEDIR=$DOTFILES_HOME/brew/linux
 ln -s $BASEDIR/.XCompose $HOME/.XCompose
 
 echo '> Done!'

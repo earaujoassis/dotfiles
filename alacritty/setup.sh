@@ -2,12 +2,15 @@
 
 set -e
 
-echo '> Setup Alacritty'
+if ! [ -f "$HOME/.config/alacritty/alacritty.yml" ]
+then
+    echo '> Setup Alacritty'
 
-mkdir -p $HOME/.config
-mkdir -p $HOME/.config/alacritty
+    mkdir -p $HOME/.config
+    mkdir -p $HOME/.config/alacritty
 
-BASEDIR=$(dirname $(realpath "$0"))
-ln -s $BASEDIR/alacritty.yml $HOME/.config/alacritty/alacritty.yml
+    BASEDIR=$DOTFILES_HOME/alacritty
+    ln -s $BASEDIR/alacritty.yml $HOME/.config/alacritty/alacritty.yml
 
-echo '> Done!'
+    echo '> Done!'
+fi

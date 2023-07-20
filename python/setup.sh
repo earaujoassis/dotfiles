@@ -2,10 +2,12 @@
 
 set -e
 
-echo '> Setup python'
+if ! [ -f "$HOME/.pythonrc" ]
+then
+    echo '> Setup python'
 
-BASEDIR=$(dirname $(realpath "$0"))
+    BASEDIR=$DOTFILES_HOME/python
+    ln -s $BASEDIR/.pythonrc $HOME/.pythonrc
 
-ln -s $BASEDIR/.pythonrc $HOME/.
-
-echo '> Done!'
+    echo '> Done!'
+fi
