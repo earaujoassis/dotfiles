@@ -2,6 +2,14 @@
 
 set -e
 
+HOME_PROFILE=$HOME/.profile
+touch $HOME_PROFILE
+
+if ! grep -q 'eval "$(/opt/homebrew/bin/brew shellenv)"' "$HOME_PROFILE"; then
+    echo "" >> $HOME_PROFILE
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME_PROFILE
+fi
+
 if ! [ `which brew` ]
 then
     echo '> Installing Homebrew'

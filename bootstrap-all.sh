@@ -26,6 +26,7 @@ then
     bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
     /opt/homebrew/bin/brew bundle --file=$HOME/dotfiles/brew/Brewfile
     export PATH=/opt/homebrew/bin:$PATH
+    eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 export DOTFILES_HOME=$HOME/dotfiles
