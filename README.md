@@ -12,7 +12,7 @@ For `zsh`, use the following setup:
 
 ```sh
 $ git clone https://github.com/earaujoassis/dotfiles.git ~/dotfiles
-$ ~/dotfiles/bootstrap.zsh
+$ ~/dotfiles/bootstrap-all.sh
 ```
 
 For `fish`, use the following setup:

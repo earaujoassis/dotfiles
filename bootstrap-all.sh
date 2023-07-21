@@ -8,7 +8,7 @@ echo '> Starting Bootstrap'
 
 if [ -n "`$SHELL -c 'echo $ZSH_VERSION'`" ]
 then
-    echo '> Running inside ZSH'
+    echo '> Running inside zsh'
 else
     echo "> Can't be loaded from: $SHELL. You need to run zsh instead."
 fi
@@ -50,6 +50,8 @@ bash -c $HOME/dotfiles/git/setup.sh
 bash -c $HOME/dotfiles/starship/setup.sh
 bash -c $HOME/dotfiles/asdf/setup.sh
 # bash -c $HOME/dotfiles/sdkman/setup.sh
+
+bash -c $HOME/dotfiles/self/set-default-shell.sh
 
 bash -c $HOME/dotfiles/self/checkpoint-completed.sh
 

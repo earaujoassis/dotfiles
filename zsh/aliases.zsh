@@ -1,4 +1,4 @@
-# Aliases for ZSH
+# Aliases for zsh
 
 ZSHDIR=$HOME/dotfiles/zsh
 source $ZSHDIR/git.zsh
