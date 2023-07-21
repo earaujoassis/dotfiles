@@ -9,6 +9,3 @@
 
 # ASDF
 .tool-versions
-
-# Work related
-zsh/work-setup.zsh
