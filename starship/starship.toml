@@ -3,6 +3,8 @@
 
 # Inserts a blank line between shell prompts
 add_newline = true
+# Set command_timeout
+command_timeout = 1000
 
 [gcloud]
 disabled = true
