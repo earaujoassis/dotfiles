@@ -1,5 +1,9 @@
 # Aliases for Git at ZSH (Work related)
 
+if [ -f "$HOME/dotfiles/config/work-env.zsh" ]; then
+    source $HOME/dotfiles/config/work-env.zsh
+fi
+
 git-work-profile() {
     ENV_FILE=$HOME/dotfiles/config/.env
     if grep -q 'GIT_WORK_EMAIL' "$ENV_FILE" && [ -f "$ENV_FILE" ]; then
