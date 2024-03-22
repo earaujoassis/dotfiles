@@ -1,0 +1,18 @@
+[cursor.style]
+blinking = "Always"
+shape = "Block"
+
+[font]
+size = 16.0
+
+[scrolling]
+history = 100000
+multiplier = 3
+
+[shell]
+args = ["-l", "-c", "tmux attach || tmux"]
+program = "/bin/zsh"
+
+[window]
+opacity = 0.8
+startup_mode = "SimpleFullscreen"

@@ -2,7 +2,7 @@
 
 set -e
 
-if ! [ -f "$HOME/.config/alacritty/alacritty.yml" ]
+if ! [ -f "$HOME/.config/alacritty/alacritty.toml" ]
 then
     echo '> Setup Alacritty'
 
@@ -10,6 +10,7 @@ then
     mkdir -p $HOME/.config/alacritty
 
     BASEDIR=$DOTFILES_HOME/alacritty
+    ln -s $BASEDIR/alacritty.toml $HOME/.config/alacritty/alacritty.toml
     ln -s $BASEDIR/alacritty.yml $HOME/.config/alacritty/alacritty.yml
 
     echo '> Done!'
