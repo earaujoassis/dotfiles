@@ -19,7 +19,7 @@ then
     exit
 fi
 
-if [ "$(which brew)" == "" ]
+if [ "$(which brew)" == "" ] && [ "$(uname)" == "Darwin" ]
 then
     echo "It seems brew is not available or it's not installed"
     echo '> Installing Homebrew'
@@ -40,13 +40,13 @@ then
     bash -c $HOME/dotfiles/brew/setup.sh
     bash -c $HOME/dotfiles/macos/post-brew.sh
     bash -c $HOME/dotfiles/coreutils/setup.sh
-    bash -c $HOME/dotfiles/alacritty/setup.sh
 else
     bash -c $HOME/dotfiles/linux/setup.sh
 fi
 
 bash -c $HOME/dotfiles/python/setup.sh
 bash -c $HOME/dotfiles/git/setup.sh
+bash -c $HOME/dotfiles/alacritty/setup.sh
 bash -c $HOME/dotfiles/starship/setup.sh
 bash -c $HOME/dotfiles/asdf/setup.sh
 # bash -c $HOME/dotfiles/sdkman/setup.sh
