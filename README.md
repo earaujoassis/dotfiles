@@ -15,7 +15,7 @@ $ git clone https://github.com/earaujoassis/dotfiles.git ~/dotfiles
 $ ~/dotfiles/bootstrap-all.sh
 ```
 
-For `fish`, use the following setup:
+For `fish`, use the following setup (not fully implemented):
 
 ```sh
 $ git clone https://github.com/earaujoassis/dotfiles.git ~/dotfiles

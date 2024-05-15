@@ -11,6 +11,7 @@ then
     echo '> Running inside zsh'
 else
     echo "> Can't be loaded from: $SHELL. You need to run zsh instead."
+    exit
 fi
 
 if [ -f "$HOME/dotfiles/checkpoints/completed" ]
