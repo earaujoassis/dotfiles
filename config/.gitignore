@@ -1,2 +1,4 @@
 *
 !.gitignore
+!.env.sample
+!work-env.sample.zsh
