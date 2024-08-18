@@ -20,7 +20,11 @@ git config --global user.email $GIT_USER_EMAIL
 git config --global core.excludesfile ~/dotfiles/.gitignore
 git config --global pull.rebase false  # merge (the default strategy)
 git config --global init.defaultBranch main
-git config --global credential.helper osxkeychain
+
+if [ "$(uname)" == "Darwin" ]
+then
+    git config --global credential.helper osxkeychain
+fi
 
 git config --global core.excludesfile $DOTFILES_HOME/.gitignore
 
