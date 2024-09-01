@@ -12,3 +12,8 @@
 
 # Misc
 .env*
+
+# Python
+__pycache__/
+.pytest_cache/
+venv/
