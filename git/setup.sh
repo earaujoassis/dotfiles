@@ -26,6 +26,4 @@ then
     git config --global credential.helper osxkeychain
 fi
 
-git config --global core.excludesfile $DOTFILES_HOME/.gitignore
-
 echo '> Done!'
