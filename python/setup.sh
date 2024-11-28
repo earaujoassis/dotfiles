@@ -4,10 +4,10 @@ set -e
 
 if ! [ -f "$HOME/.pythonrc" ]
 then
-    echo '> Setup python'
+    echo "> Setup python"
 
     BASEDIR=$DOTFILES_HOME/python
     ln -s $BASEDIR/.pythonrc $HOME/.pythonrc
 
-    echo '> Done!'
+    echo "> Done!"
 fi

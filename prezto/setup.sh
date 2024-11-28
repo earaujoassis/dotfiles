@@ -6,7 +6,7 @@ PREZTO_DIR=$HOME/.zprezto
 
 if ! [ -d "$PREZTO_DIR" ]
 then
-    echo '> Setup Prezto'
+    echo "> Setup Prezto"
     git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 
     setopt EXTENDED_GLOB
@@ -14,5 +14,5 @@ then
     ln -fs "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
     done
 
-    echo '> Done!'
+    echo "> Done!"
 fi

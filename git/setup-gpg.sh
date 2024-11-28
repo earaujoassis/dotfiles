@@ -2,21 +2,21 @@
 
 set -e
 
-echo '> Setup git and gpg'
+echo "> Setup git and gpg"
 
-if [ "$(which gpg)" == "" ]
+if [[ "$(which gpg)" == "" ]]
 then
-    echo '> gpg is not available; have you bootstraped the project already?'
+    echo "> gpg is not available; have you bootstraped the project already?"
     exit
 fi
 
-if [ "$(gpg --list-secret-keys --with-colons --with-fingerprint | awk -F: '/^fpr:/ { print $10 }')" == "" ]
+if [[ "$(gpg --list-secret-keys --with-colons --with-fingerprint | awk -F: '/^fpr:/ { print $10 }')" == "" ]]
 then
-    echo '> Error: no secret key available in gpg; exiting'
+    echo "> Error: no secret key available in gpg; exiting"
     exit
 fi
 
-if [ "$KEY" == "" ]
+if [[ "$KEY" == "" ]]
 then
     echo '> Error: you must define a $KEY value; exiting'
     exit
@@ -31,4 +31,4 @@ fi
 git config --global user.signingkey ${KEY}
 git config --global commit.gpgsign true
 
-echo '> Done!'
+echo "> Done!"

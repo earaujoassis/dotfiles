@@ -6,12 +6,13 @@ BASEDIR=$DOTFILES_HOME/starship
 
 if ! [ `which starship` ]
 then
-    echo '> Setup Starship'
-    echo '> Installing Starship'
+    echo "> Installing Starship"
     curl -fsSL https://starship.rs/install.sh | sh
     echo "" >> $HOME_PROFILE
     echo 'eval "$(starship init zsh)"' >> $HOME_PROFILE
     mkdir -p $HOME/.config
     ln -s $BASEDIR/starship.toml $HOME/.config/starship.toml
-    echo '> Done!'
+    echo "> Done!"
+else
+    echo "> Starship is already available; skipping"
 fi

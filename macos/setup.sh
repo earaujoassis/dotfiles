@@ -7,21 +7,21 @@
 # - https://github.com/sobolevn/dotfiles
 #
 
-echo '> Setup Xcode'
+echo "> Setup Xcode"
 
 xcode-select --install
 if [ $? != 0 ]
 then
-    echo '> Error: xcode-select --install'
+    echo "> Error: xcode-select --install"
 fi
 
 sudo sudo xcodebuild -license
 if [ $? != 0 ]
 then
-    echo '> Error: sudo sudo xcodebuild -license'
+    echo "> Error: sudo sudo xcodebuild -license"
 fi
 
-echo '> Setup macOS settings'
+echo "> Setup macOS settings"
 osascript -e 'tell application "System Preferences" to quit'
 
 # Battery: hide time; display percentage
@@ -91,8 +91,8 @@ defaults write com.apple.Safari \
   -bool false
 
 # Restarting apps:
-echo '> Restarting apps...'
+echo "> Restarting apps..."
 killall Finder
 killall Dock
 
-echo '> Done!'
+echo "> Done!"

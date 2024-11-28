@@ -2,8 +2,8 @@
 
 set -e
 
-echo '> Setting the default shell to zsh'
+echo "> Setting the default shell to zsh"
 
 chsh -s /bin/zsh
 
-echo '> You should restart your shell instance'
+echo "> You must restart your shell instance"
