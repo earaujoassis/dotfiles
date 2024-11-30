@@ -12,3 +12,16 @@ then
 
     echo "> Done!"
 fi
+
+read -n1 -rep '> Would you like to setup gnupg? (y,n) ' OPTION
+if [[ $OPTION == "Y" || $OPTION == "y" ]]
+then
+    echo "> Setup gnupg"
+
+    mkdir -p $HOME/.gnupg/
+    BASEDIR=$DOTFILES_HOME/linux
+    ln -s $BASEDIR/gpg-agent.conf $HOME/.gnupg/gpg-agent.conf
+    gpg-connect-agent reloadagent /bye
+
+    echo "> Done!"
+fi
