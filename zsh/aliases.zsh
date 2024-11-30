@@ -6,7 +6,8 @@ source $ZSHDIR/git.zsh
 source $ZSHDIR/docker.zsh
 source $ZSHDIR/ssh.zsh
 
-if [ -f "$ZSHDIR/work-setup.zsh" ]; then
+if [ -f "$ZSHDIR/work-setup.zsh" ]
+then
     source $ZSHDIR/work-setup.zsh
 fi
 

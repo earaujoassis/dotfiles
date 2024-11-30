@@ -8,7 +8,7 @@ read -n1 -rep '> Would you like to setup sdkman? (y,n) ' OPTION
 if [[ $OPTION == "Y" || $OPTION == "y" ]]
 then
 
-    export SDKMAN_DIR=$HOME/.sdkman
+    SDKMAN_DIR=$HOME/.sdkman
     if ! [ -d "$SDKMAN_DIR" ]
     then
         echo "> Setup sdkman"

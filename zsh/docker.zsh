@@ -5,7 +5,8 @@ docker-bash() {
 }
 
 docker-stop-all() {
-    if [ "$(docker ps -a -q)" ]; then
+    if [ "$(docker ps -a -q)" ]
+    then
         docker stop $(docker ps -a -q)
         docker rm $(docker ps -a -q)
     else
@@ -15,7 +16,8 @@ docker-stop-all() {
 
 docker-prune() {
     docker system prune -a -f
-    if [ "$(docker volume ls -q)" ]; then
+    if [ "$(docker volume ls -q)" ]
+    then
         docker volume rm $(docker volume ls -q)
     else
         echo "> No available volumes; skipping"
