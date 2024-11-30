@@ -3,8 +3,8 @@ blinking = "Always"
 shape = "Block"
 
 [font]
-# normal ={ family = "JetbrainsMono Nerd Font", style = "regular" }
-size = 16.0
+normal ={ family = "JetBrainsMono Nerd Font", style = "Regular" }
+size = 18.0
 
 [scrolling]
 history = 100000

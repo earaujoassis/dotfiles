@@ -10,8 +10,8 @@ then
     mkdir -p $HOME/.config/alacritty
 
     BASEDIR=$DOTFILES_HOME/alacritty
-    ln -s $BASEDIR/alacritty.toml $HOME/.config/alacritty/alacritty.toml
-    ln -s $BASEDIR/alacritty.yml $HOME/.config/alacritty/alacritty.yml
+    ln -s $BASEDIR/alacritty.macos.toml $HOME/.config/alacritty/alacritty.toml
+    # ln -s $BASEDIR/alacritty.yml $HOME/.config/alacritty/alacritty.yml
 
     echo "> Done!"
 else
