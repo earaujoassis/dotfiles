@@ -51,6 +51,7 @@ bash -c $HOME/dotfiles/alacritty/setup.sh
 bash -c $HOME/dotfiles/starship/setup.sh
 bash -c $HOME/dotfiles/asdf/setup.sh
 bash -c $HOME/dotfiles/sdkman/setup.sh
+bash -c $HOME/dotfiles/neovim/setup.sh
 
 bash -c $HOME/dotfiles/self/set-default-shell.sh
 

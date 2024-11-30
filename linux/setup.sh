@@ -2,15 +2,13 @@
 
 set -e
 
-read -n1 -rep '> Would you like to setup Linux & XCompose? (y,n) ' OPTION
+read -n1 -rep '> Would you like to setup XCompose? (y,n) ' OPTION
 if [[ $OPTION == "Y" || $OPTION == "y" ]]
 then
+    echo "> Setup XCompose"
 
-    echo "> Setup Linux"
-
-    BASEDIR=$DOTFILES_HOME/brew/linux
+    BASEDIR=$DOTFILES_HOME/linux
     ln -s $BASEDIR/.XCompose $HOME/.XCompose
 
     echo "> Done!"
-
 fi

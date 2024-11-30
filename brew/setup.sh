@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
+# WARNING Brew is only explicitly installed on macOS
+
 set -e
 
 HOME_PROFILE=$HOME/.profile
 touch $HOME_PROFILE
-
-# Brew is only explicitly installed on macOS
 
 if ! [ grep -q 'eval "$(/opt/homebrew/bin/brew shellenv)"' "$HOME_PROFILE" ]
 then

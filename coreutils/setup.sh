@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
+# WARNING coreutils is only explicitly installed on macOS
+
 set -e
 
 HOME_PROFILE=$HOME/.profile
 GNUBIN="/usr/local/opt/coreutils/libexec/gnubin"
-
-# coreutils is only explicitly installed on macOS
 
 if [ -f "$GNUBIN" ] && ! [ `grep -q 'export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"' "$HOME_PROFILE"` ]
 then
