@@ -10,7 +10,15 @@ then
     mkdir -p $HOME/.config/alacritty
 
     BASEDIR=$DOTFILES_HOME/alacritty
-    ln -s $BASEDIR/alacritty.macos.toml $HOME/.config/alacritty/alacritty.toml
+    if [[ "$(uname)" == "Darwin" ]]
+    then
+        ln -s $BASEDIR/alacritty.macos.toml $HOME/.config/alacritty/alacritty.toml
+    elif [[ "$(uname)" == "Linux" ]]
+    then
+        ln -s $BASEDIR/alacritty.linux.toml $HOME/.config/alacritty/alacritty.toml
+    else
+        echo "> System is not macOS nor Linux; Alacritty is misconfigured"
+    fi
     # ln -s $BASEDIR/alacritty.yml $HOME/.config/alacritty/alacritty.yml
 
     echo "> Done!"

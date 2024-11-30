@@ -1,0 +1,19 @@
+[cursor.style]
+blinking = "Always"
+shape = "Block"
+
+[font]
+normal ={ family = "JetbrainsMono Nerd Font", style = "regular" }
+size = 14.0
+
+[scrolling]
+history = 100000
+multiplier = 3
+
+[terminal.shell]
+args = ["-l", "-c", "tmux attach || tmux"]
+program = "/bin/zsh"
+
+[window]
+opacity = 1
+startup_mode = "SimpleFullscreen"
