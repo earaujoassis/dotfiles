@@ -2,7 +2,7 @@
 
 set -e
 
-read -n1 -rep '> Would you like to setup XCompose? (y,n) ' OPTION
+read -n1 -rep '> Would you like to setup XCompose? [y, N] ' OPTION
 if [[ $OPTION == "Y" || $OPTION == "y" ]]
 then
     echo "> Setup XCompose"
@@ -13,7 +13,7 @@ then
     echo "> Done!"
 fi
 
-read -n1 -rep '> Would you like to setup gnupg? (y,n) ' OPTION
+read -n1 -rep '> Would you like to setup gnupg? [y, N] ' OPTION
 if [[ $OPTION == "Y" || $OPTION == "y" ]]
 then
     echo "> Setup gnupg"

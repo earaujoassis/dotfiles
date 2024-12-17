@@ -25,8 +25,8 @@ then
     echo "> It seems brew is not available or it's not installed"
     echo "> Installing Homebrew"
     bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-    /opt/homebrew/bin/brew bundle --file=$HOME/dotfiles/brew/Brewfile
     export PATH=/opt/homebrew/bin:$PATH
+    /opt/homebrew/bin/brew bundle --file=$HOME/dotfiles/brew/Brewfile || true
     eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 

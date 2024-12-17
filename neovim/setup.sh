@@ -3,7 +3,7 @@
 if ! [ `which nvim` ]
 then
     echo "> neovim is not available."
-    read -n1 -rep '> Would you like to install neovim? (y,n) ' OPTION
+    read -n1 -rep '> Would you like to install neovim? [y, N] ' OPTION
     if [[ $OPTION == "Y" || $OPTION == "y" ]]
     then
         if [[ "$(which brew)" != "" ]] && [[ "$(uname)" == "Darwin" ]]

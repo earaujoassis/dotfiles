@@ -13,7 +13,7 @@ then
     exit
 fi
 
-read -n1 -rep '> Would you like to setup git? (y,n) ' OPTION
+read -n1 -rep '> Would you like to setup git? [y, N] ' OPTION
 if [[ $OPTION == "Y" || $OPTION == "y" ]]
 then
 

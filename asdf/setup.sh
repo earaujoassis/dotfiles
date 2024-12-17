@@ -5,7 +5,7 @@ set -e
 HOME_PROFILE=$HOME/.profile
 ASDF_DIR=$HOME/.asdf
 
-read -n1 -rep '> Would you like to setup ASDF? (y,n) ' OPTION
+read -n1 -rep '> Would you like to setup ASDF? [y, N] ' OPTION
 if [[ $OPTION == "Y" || $OPTION == "y" ]]
 then
 

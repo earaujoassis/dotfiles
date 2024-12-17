@@ -4,7 +4,7 @@ set -e
 
 HOME_PROFILE=$HOME/.profile
 
-read -n1 -rep '> Would you like to setup sdkman? (y,n) ' OPTION
+read -n1 -rep '> Would you like to setup sdkman? [y, N] ' OPTION
 if [[ $OPTION == "Y" || $OPTION == "y" ]]
 then
 
