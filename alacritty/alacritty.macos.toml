@@ -3,16 +3,15 @@ blinking = "Always"
 shape = "Block"
 
 [font]
-normal ={ family = "JetBrainsMono Nerd Font", style = "Regular" }
+normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
 size = 18.0
 
 [scrolling]
 history = 100000
 multiplier = 3
 
-[terminal.shell]
-args = ["-l", "-c", "tmux attach || tmux"]
-program = "/bin/zsh"
+[terminal]
+shell = { program = "/bin/zsh", args = ["-l", "-c", "tmux attach || tmux"] }
 
 [window]
 opacity = 0.8

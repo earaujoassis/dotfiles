@@ -10,9 +10,8 @@ size = 14.0
 history = 100000
 multiplier = 3
 
-[terminal.shell]
-args = ["-l", "-c", "tmux attach || tmux"]
-program = "/bin/zsh"
+[terminal]
+shell = { program = "/bin/zsh", args = ["-l", "-c", "tmux attach || tmux"] }
 
 [window]
 opacity = 1
