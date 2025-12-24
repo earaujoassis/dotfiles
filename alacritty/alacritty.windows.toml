@@ -1,4 +1,4 @@
-[shell]
+[terminal.shell]
 program = "C:\\Windows\\System32\\wsl.exe"
 args = ["--", "cd $HOME && tmux attach || tmux"]
 
