@@ -6,13 +6,7 @@ touch $HOME_PROFILE
 if ! [ `which starship` ]
 then
     echo "> Installing Starship"
-    if [[ "$(uname)" == "Darwin" ]]
-    then
-        curl -fsSL https://starship.rs/install.sh | sh
-    elif [[ "$(uname)" == "Linux" ]]
-    then
-        yay -S --noconfirm starship
-    fi
+    curl -fsSL https://starship.rs/install.sh | sh
     echo "> Updating .profile to load starship..."
     echo "" >> $HOME_PROFILE
     echo 'eval "$(starship init zsh)"' >> $HOME_PROFILE
