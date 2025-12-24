@@ -43,6 +43,7 @@ then
     bash -c $HOME/dotfiles/coreutils/setup.sh
 else
     bash -c $HOME/dotfiles/linux/setup.sh
+    # bash -c $HOME/dotfiles/linux/zsh-highlight-setup.sh
 fi
 
 bash -c $HOME/dotfiles/python/setup.sh
